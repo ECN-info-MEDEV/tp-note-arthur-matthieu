@@ -87,6 +87,8 @@ public class GrilleTest {
     public void testTouche(){
        Grille g = new Grille (5);
        boolean res = g.touche(1,1);
+       g.placeBateau(1,2);
+       assertTrue(g.touche(1,2));
        assertFalse(res);
        
     }
