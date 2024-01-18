@@ -6,8 +6,9 @@ package org.centrale.test;
 
 
 /**
- *
+ * La classe Grille représente une grille dans la Bataille navale
  * @author mattb
+ * @author arthur
  */
 public class Grille {
     
@@ -15,7 +16,7 @@ public class Grille {
     private char[][] grille;
 
     /**
-     *
+     * Constructeur pour construire une grille avec une taille (on suppose que la longueur et la largeur sont les mêmes
      * @param taille
      */
     public Grille(int taille) {

@@ -49,14 +49,21 @@ public class Bateau {
         return estVertical;
     }
 
+     /**
+     * Modifie la valeur du booléen estVertical
+     */
     public void setEstVertical(boolean estVertical) {
         this.estVertical = estVertical;
     }
-
+     /**
+     * Modifie la valeur de la taille du bateau
+     */
     public void setTaille(int taille) {
         this.taille = taille;
     }
-
+     /**
+     * Modifie la valeur da position du bateau
+     */
     public void setPosition(int[] position) {
         this.position = position;
     }
