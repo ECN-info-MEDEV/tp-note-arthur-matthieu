@@ -19,7 +19,7 @@ public class Bateau {
      *
      * @param taille La taille du bateau.
      * @param position La position initiale du bateau [x, y].
-     * @param isVertical True si le bateau est orienté verticalement, false s'il est orienté horizontalement.
+     * @param estVertical True si le bateau est orienté verticalement, false s'il est orienté horizontalement.
      */
     public Bateau(int taille, int[] position, boolean estVertical) {
         this.taille = taille; 
@@ -48,4 +48,19 @@ public class Bateau {
     public boolean GetEstVertical() {
         return estVertical;
     }
+
+    public void setEstVertical(boolean estVertical) {
+        this.estVertical = estVertical;
+    }
+
+    public void setTaille(int taille) {
+        this.taille = taille;
+    }
+
+    public void setPosition(int[] position) {
+        this.position = position;
+    }
+    
+    
+    
 }

@@ -98,5 +98,11 @@ public class Joueur {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return  nom;
+    }
+    
     
 }
