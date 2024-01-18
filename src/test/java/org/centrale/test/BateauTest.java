@@ -11,7 +11,7 @@ public class BateauTest {
     @Test
     public void testGetTaille() {
         Bateau ship = new Bateau(5, new int[]{1, 1}, true);
-        assertEquals(3, ship.getTaille());
+        assertEquals(5, ship.getTaille());
     }
 
     @Test
