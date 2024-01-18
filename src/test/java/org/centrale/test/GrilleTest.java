@@ -79,10 +79,8 @@ public class GrilleTest {
     @Test
     public void testPlaceBateau(){
         Grille g = new Grille (5);
-        char[][] newGrid = new char[5][5];
-                newGrid[2][2] = 'B';
         g.placeBateau(2,2);
-        assertSame(newGrid, g.getGrille());
+        assertTrue('B' == g.getGrille()[2][2]);
     }
     
     @Test
