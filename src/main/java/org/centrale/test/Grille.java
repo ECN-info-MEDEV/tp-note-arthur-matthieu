@@ -70,19 +70,23 @@ public class Grille {
         this.grille[x][y]='B';
     }
     
-    private void touche(int x, int y){
+    private boolean touche(int x, int y){
+        
+        boolean touche;
         
         if (this.grille[x][y] == 'B'){
             
             this.grille[x][y] = 'O';
-            
+            touche = true;
         } 
         
         else {
             
             this.grille[x][y] = 'X';
-            
+            touche = false;
         }
+        
+        return touche;
     }
     
     private void affiche (){
