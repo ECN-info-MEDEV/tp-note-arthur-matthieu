@@ -94,8 +94,8 @@ public class Grille {
             
             for (int j = 0 ; j < taille ; j++){
                 
-                System.out.print(this.grille[i][j]+ "" + ' '); 
-                
+                System.out.print(this.grille[i][j] +""+ ' '); 
+
             }
             
             System.out.println();
@@ -110,13 +110,13 @@ public class Grille {
                 
                 if(this.grille[i][j] == 'B'){
                     
-                    System.out.print('.'+' ');
+                    System.out.print('.'+""+' ');
                     
                 }
                 
                 else{
                     
-                    System.out.print(this.grille[i][j]+' ');
+                    System.out.print(this.grille[i][j]+""+' ');
                     
                 }
             }
