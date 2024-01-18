@@ -10,43 +10,25 @@ package org.centrale.test;
  * @author arthur
  */
 public class Bateau {
-    private int longueur;          // Longueur du bateau
-    private int largeur ;           // Largeur du bateau
+    private int taille;          // taille du bateau
     private int[] position;    // Position du bateau [x, y]
     private boolean isVertical; // Orientation du bateau
 
      /**
      * Constructeur pour créer un bateau avec une taille, une position et une orientation.
      *
-     * @param longueur La longueur du bateau.
-     * @param largeur La largeur du bateau
+     * @param taille La taille du bateau.
      * @param position La position initiale du bateau [x, y].
      * @param isVertical True si le bateau est orienté verticalement, false s'il est orienté horizontalement.
      */
-    public Bateau(int longueur, int largeur, int[] position, boolean isVertical) {
-        this.longueur = longueur;
-        this.largeur = largeur ; 
+    public Bateau(int taille, int[] position, boolean isVertical) {
+        this.taille = taille; 
         this.position = position;
         this.isVertical = isVertical;
     }
 
-        /**
-     * Obtient la longueur du bateau.
-     *
-     * @return La longueur du bateau.
-     */
-    public int getLongueur() {
-        return longueur;
-    }
-
-    
-     /**
-     * Obtient la largeur du bateau.
-     *
-     * @return La largeur du bateau.
-     */    
-    public int getLargeur(){
-        return largeur ; 
+    public int getTaille() {
+        return taille;
     }
     
         /**
