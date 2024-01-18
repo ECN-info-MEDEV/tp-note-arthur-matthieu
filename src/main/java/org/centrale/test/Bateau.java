@@ -5,9 +5,65 @@
 package org.centrale.test;
 
 /**
- *
+ * La classe Bateau représente un bateau dans la Bataille navale
  * @author mattb
+ * @author arthur
  */
 public class Bateau {
+    private int longueur;          // Longueur du bateau
+    private int largeur ;           // Largeur du bateau
+    private int[] position;    // Position du bateau [x, y]
+    private boolean isVertical; // Orientation du bateau
+
+     /**
+     * Constructeur pour créer un bateau avec une taille, une position et une orientation.
+     *
+     * @param longueur La longueur du bateau.
+     * @param largeur La largeur du bateau
+     * @param position La position initiale du bateau [x, y].
+     * @param isVertical True si le bateau est orienté verticalement, false s'il est orienté horizontalement.
+     */
+    public Bateau(int longueur, int largeur, int[] position, boolean isVertical) {
+        this.longueur = longueur;
+        this.largeur = largeur ; 
+        this.position = position;
+        this.isVertical = isVertical;
+    }
+
+        /**
+     * Obtient la longueur du bateau.
+     *
+     * @return La longueur du bateau.
+     */
+    public int getLongueur() {
+        return longueur;
+    }
+
     
+     /**
+     * Obtient la largeur du bateau.
+     *
+     * @return La largeur du bateau.
+     */    
+    public int getLargeur(){
+        return largeur ; 
+    }
+    
+        /**
+     * Obtient la position du bateau.
+     *
+     * @return La position du bateau sous la forme d'un tableau [x, y].
+     */
+    public int[] getPosition() {
+        return position;
+    }
+
+     /**
+     * Vérifie si le bateau est orienté verticalement.
+     *
+     * @return True si le bateau est orienté verticalement, false sinon.
+     */
+    public boolean isVertical() {
+        return isVertical;
+    }
 }
