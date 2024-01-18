@@ -11,8 +11,8 @@ package org.centrale.test;
  */
 public class Bateau {
     private int taille;          // taille du bateau
-    private int[] position;    // Position du bateau [x, y]
-    private boolean isVertical; // Orientation du bateau
+    private int[] position;      // Position du bateau [x, y]
+    private boolean estVertical;  // Orientation du bateau
 
      /**
      * Constructeur pour créer un bateau avec une taille, une position et une orientation.
@@ -45,7 +45,7 @@ public class Bateau {
      *
      * @return True si le bateau est orienté verticalement, false sinon.
      */
-    public boolean isVertical() {
-        return isVertical;
+    public boolean GetEstVertical() {
+        return estVertical;
     }
 }

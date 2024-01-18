@@ -55,5 +55,30 @@ public class Joueur {
         this.plateau = plateau;
     }
 
+    public boolean aPerdu(){
+        
+        boolean perdu = true;
+        
+        for (int i =0; i < this.plateau.getTaille() ; i++){
+            
+            for (int j = 0 ; j < this.plateau.getTaille() ; j++){
+                
+                if(this.plateau.getGrille()[i][j] == 'B'){
+                    
+                    perdu = false;
+                    
+                }
+                   
+            }
+            
+        }
+        
+        return perdu;
+        
+    }
+    
+    public void pose(Bateau b){
+        if (b.Get)
+    }
     
 }
