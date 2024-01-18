@@ -9,12 +9,34 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
 /**
  *
  * @author arthu
  */
 public class GrilleTest {
-    
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+
+    @Before
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @After
+    public void restoreStreams() {
+        System.setOut(originalOut);
+    }
+
     public GrilleTest() {
     }
     
@@ -91,5 +113,20 @@ public class GrilleTest {
        assertTrue(g.touche(1,2));
        assertFalse(res);
        
+    }
+    @Test
+    public void testAffiche() {
+        
+        Grille instance = new Grille(5);
+        instance.setGrille(new char[][]{{'a', 'b'}, {'c', 'd'}});
+
+        // Supposons que la taille soit correcte
+        instance.affiche();
+
+        // Définissez la sortie attendue
+        String expectedOutput = "a b \nc d \n";
+
+        // Vérifiez que la sortie réelle est égale à la sortie attendue
+        assertEquals(expectedOutput, outContent.toString());
     }
 }

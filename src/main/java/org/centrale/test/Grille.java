@@ -94,7 +94,7 @@ public class Grille {
             
             for (int j = 0 ; j < taille ; j++){
                 
-                System.out.print(this.grille[i][j]+' '); 
+                System.out.print(this.grille[i][j]+ "" + ' '); 
                 
             }
             
