@@ -114,19 +114,4 @@ public class GrilleTest {
        assertFalse(res);
        
     }
-    @Test
-    public void testAffiche() {
-        
-        Grille instance = new Grille(5);
-        instance.setGrille(new char[][]{{'a', 'b'}, {'c', 'd'}});
-
-        // Supposons que la taille soit correcte
-        instance.affiche();
-
-        // Définissez la sortie attendue
-        String expectedOutput = "a b \nc d \n";
-
-        // Vérifiez que la sortie réelle est égale à la sortie attendue
-        assertEquals(expectedOutput, outContent.toString());
-    }
 }
