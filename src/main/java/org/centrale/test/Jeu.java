@@ -1,0 +1,179 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package org.centrale.test;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author arthu
+ */
+public class Jeu {
+
+    public Joueur joueur1;
+    public Joueur joueur2;
+    
+    public Grille grille1;
+    public Grille grille2;
+    
+    public Bateau bateau;
+
+    public Jeu() {
+        this.joueur1 = null;
+        this.joueur2 = null;
+        this.grille1 = null;
+        this.grille2 = null;
+        this.bateau = null;
+    }
+
+    public Joueur getJoueur1() {
+        return joueur1;
+    }
+
+    public void setJoueur1(Joueur joueur1) {
+        this.joueur1 = joueur1;
+    }
+
+    public Joueur getJoueur2() {
+        return joueur2;
+    }
+
+    public void setJoueur2(Joueur joueur2) {
+        this.joueur2 = joueur2;
+    }
+
+    public Grille getGrille1() {
+        return grille1;
+    }
+
+    public void setGrille1(Grille grille1) {
+        this.grille1 = grille1;
+    }
+
+    public Grille getGrille2() {
+        return grille2;
+    }
+
+    public void setGrille2(Grille grille2) {
+        this.grille2 = grille2;
+    }
+
+    public Bateau getBateau() {
+        return bateau;
+    }
+
+    public void setBateau(Bateau bateau) {
+        this.bateau = bateau;
+    }
+    
+    
+
+    
+    
+    public void jeu() {
+        
+        int tailleGrille = 5;
+        
+        Grille grille1 = new Grille (tailleGrille);
+        Grille grille2 = new Grille (tailleGrille);
+        
+        this.setGrille1(grille1);
+        this.setGrille2(grille2);
+        
+        Scanner scanner = new Scanner(System.in);
+        
+            //On récupère le nom des deux joueurs
+        System.out.println("Nom du joueur 1 ?");
+        String nom = scanner.nextLine();
+        Joueur joueur1 = new Joueur(nom,grille1);
+        this.setJoueur1(joueur1);
+        
+        System.out.println("Nom du joueur 2 ?");
+        nom = scanner.nextLine();
+        Joueur joueur2 = new Joueur(nom,grille2);
+        this.setJoueur2(joueur2);
+        
+        int nbBateau3 = 1; //inutilisé pour l'instant
+        int nbBateau4 = 1; //inutilisé pour l'instant
+        int nbBateau5 = 1; //inutilisé pour l'instant
+        
+        int tailleBateau = 5;
+        int pos[] = new int [2];
+        Bateau bateau = new Bateau(5, pos, false);
+        this.setBateau(bateau);
+        
+            //On place les bateaux du joueur 1
+        creeBateau(joueur1,bateau);
+        this.joueur1.pose(bateau);
+        
+        tailleBateau = 4;
+        this.bateau.setTaille(tailleBateau);
+        creeBateau(joueur1,bateau);
+        this.joueur1.pose(bateau);
+        
+        tailleBateau = 3;
+        this.bateau.setTaille(tailleBateau);
+        creeBateau(joueur1,bateau);
+        this.joueur1.pose(bateau);
+        
+            //On place les bateaux du joueur 2
+        tailleBateau = 5;
+        this.bateau.setTaille(tailleBateau);
+        creeBateau(joueur2,bateau);
+        this.joueur2.pose(bateau);
+        
+        tailleBateau = 4;
+        this.bateau.setTaille(tailleBateau);
+        creeBateau(joueur2,bateau);
+        this.joueur2.pose(bateau);
+        
+        tailleBateau = 3;
+        this.bateau.setTaille(tailleBateau);
+        creeBateau(joueur2,bateau);
+        this.joueur2.pose(bateau);
+        
+    }
+    
+    public void tourDeJeu(){
+        Scanner scanner = new Scanner(System.in);
+        
+            //Joueur 1
+        System.out.println("Tour de " + joueur1);
+        System.out.println("Votre plateau :");
+        this.grille1.affiche();
+        System.out.println("Plateau de l'adversaire");
+        this.grille2.afficheAdversaire();
+        
+        
+
+    }
+    
+    public void creeBateau(Joueur j, Bateau b){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println(j+" place un bateau de taille "+b.getTaille()+".");
+        
+        System.out.println("Pos en x?");
+        int x = scanner.nextInt()- 1;
+        System.out.println("Pos en Y?");
+        int y = scanner.nextInt()- 1;
+        int pos[] = new int[2];
+        pos[0] = x;
+        pos[1] = y;
+        
+        System.out.println("Vertical (0) ou horizontal(1) ?");
+        boolean vert;
+        if(scanner.nextInt()==0){
+            vert = true;
+        }
+        else{
+            vert = false;
+        }
+        
+        b.setEstVertical(vert);
+        b.setPosition(pos);
+    }
+}
+

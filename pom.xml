@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <exec.mainClass>org.centrale.test.Test</exec.mainClass>
+        <exec.mainClass>org.centrale.test.BatailleNavale</exec.mainClass>
         <sonar.organization>ecn-info-medev</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
@@ -24,11 +24,35 @@
                 <archive>
                     <manifest>
                         <addClasspath>true</addClasspath>
-                        <mainClass>org.centrale.test.Test</mainClass>
+                        <mainClass>org.centrale.test.BatailleNavale</mainClass>
                     </manifest>
                 </archive>
             </configuration>
             </plugin>
+                <plugin>
+      <groupId>org.jacoco</groupId>
+     <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.7</version>
+      <executions>
+        <execution>
+          <id>prepare-agent</id>
+          <goals>
+            <goal>prepare-agent</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>report</id>
+          <goals>
+            <goal>report</goal>
+          </goals>
+          <configuration>
+            <formats>
+              <format>XML</format>
+            </formats>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
         </plugins>
     </build>
     <dependencies>

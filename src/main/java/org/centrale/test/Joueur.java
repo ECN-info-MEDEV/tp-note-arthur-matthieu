@@ -83,7 +83,7 @@ public class Joueur {
         
             for (int i = b.getPosition()[0]; i < b.getTaille() ; i++){
             
-                this.plateau.getGrille()[i][b.getPosition()[1]] = 'B';
+                this.plateau.placeBateau(i,b.getPosition()[1]);
             
             }
             
@@ -93,7 +93,7 @@ public class Joueur {
             
             for (int i = b.getPosition()[1]; i < b.getTaille() ; i++){
             
-                this.plateau.getGrille()[b.getPosition()[0]][i] = 'B';
+                this.plateau.placeBateau(b.getPosition()[1], i);
             
             }
         }
