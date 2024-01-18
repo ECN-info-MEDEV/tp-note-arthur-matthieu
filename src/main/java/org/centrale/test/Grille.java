@@ -34,43 +34,55 @@ public class Grille {
         
     }
 
-    /**
+            /**
+     * Obtient la taille de la grille
      *
-     * @return
+     * @return La taille de la grille.
      */
     public int getTaille() {
         return taille;
     }
 
-    /**
-     *
-     * @param taille
+     /**
+     * Modifie la valeur da taille de la grille
+     * @param taille taille souhaitée 
      */
     public void setTaille(int taille) {
         this.taille = taille;
     }
 
-    /**
+            /**
+     * Obtient la grille
      *
-     * @return
+     * @return La grille.
      */
     public char[][] getGrille() {
         return grille;
     }
 
-    /**
-     *
-     * @param grille
+     /**
+     * Modifie la grille
+     * @param grille grille souhaitée
      */
     public void setGrille(char[][] grille) {
         this.grille = grille;
     }
     
-    
+    /**
+     * Place un icone Bateau sur la grille pour une seule coordonnée
+     * @param x abscisse 
+     * @param y ordonnée
+     */
     public void placeBateau(int x , int y){
         this.grille[x][y]='B';
     }
     
+    /**
+     * Met à jour la grille en fonction du coup (x,y) joué
+     * @param x abscisse
+     * @param y ordonnée
+     * @return  
+     */
     public boolean touche(int x, int y){
         
         boolean touche;
@@ -90,6 +102,9 @@ public class Grille {
         return touche;
     }
     
+    /**
+     * Affiche la grille avec tous les icones (même les bateaux)
+     */
     public void affiche (){
         for (int i =0; i < taille ; i++){
             
@@ -103,6 +118,9 @@ public class Grille {
         }
     }
     
+    /**
+     * Affiche la grille de l'adversaire (on ne voit pas ses bateaux)
+     */
     public void afficheAdversaire (){
         
         for (int i =0; i < taille ; i++){

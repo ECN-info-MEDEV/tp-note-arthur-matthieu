@@ -27,6 +27,11 @@ public class Bateau {
         this.estVertical = estVertical;
     }
 
+            /**
+     * Obtient la taille du bateau
+     *
+     * @return La taillen du bateau sous la forme d'un entier.
+     */
     public int getTaille() {
         return taille;
     }
@@ -51,18 +56,21 @@ public class Bateau {
 
      /**
      * Modifie la valeur du booléen estVertical
+     * @param estVertical Vertical ?
      */
     public void setEstVertical(boolean estVertical) {
         this.estVertical = estVertical;
     }
      /**
      * Modifie la valeur de la taille du bateau
+     * @param taille : taille u bateau souhaitée
      */
     public void setTaille(int taille) {
         this.taille = taille;
     }
      /**
      * Modifie la valeur da position du bateau
+     * @param position position souhaitée
      */
     public void setPosition(int[] position) {
         this.position = position;
