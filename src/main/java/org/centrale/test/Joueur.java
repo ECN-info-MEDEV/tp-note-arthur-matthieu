@@ -5,7 +5,7 @@
 package org.centrale.test;
 
 /**
- *
+ *  Classe joueur qui associe un joueur (son nom) et sa grille de jeu
  * @author mattb
  */
 public class Joueur {
@@ -14,9 +14,9 @@ public class Joueur {
     private Grille plateau;
 
     /**
-     *
-     * @param nom
-     * @param plateau
+     *  Constructeur
+     * @param nom   nom du joueur
+     * @param plateau   grille correspondant au joueur
      */
     public Joueur(String nom, Grille plateau) {
         this.nom = nom;
@@ -55,6 +55,10 @@ public class Joueur {
         this.plateau = plateau;
     }
 
+    /**
+     *  Vérifie que le joueur a encore un bateau présent
+     * @return vrai si le joueur a perdu (0 bateau restant)
+     */
     public boolean aPerdu(){
         
         boolean perdu = true;
@@ -77,6 +81,10 @@ public class Joueur {
         
     }
     
+    /**
+     *  Pose un bateau sur la grille (change une valeur de la grille)
+     * @param b bateau qu'on insère (via sa position initiale)
+     */
     public void pose(Bateau b){
         
         if (b.GetEstVertical() == false){
@@ -99,6 +107,10 @@ public class Joueur {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return  nom;
