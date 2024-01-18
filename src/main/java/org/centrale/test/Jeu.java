@@ -12,54 +12,114 @@ import java.util.Scanner;
  */
 public class Jeu {
 
+    /**
+     *  Joueur 1
+     */
     public Joueur joueur1;
+
+    /**
+     *  Joueur 2
+     */
     public Joueur joueur2;
     
+    /**
+     *  Plateau du joueur 1
+     */
     public Grille grille1;
+
+    /**
+     *  Plateau du joueur 2
+     */
     public Grille grille2;
     
+    /**
+     *  Bateau pour placer tous les bateaux
+     */
     public Bateau bateau;
 
+    /**
+     *
+     * @return
+     */
     public Joueur getJoueur1() {
         return joueur1;
     }
 
+    /**
+     *
+     * @param joueur1
+     */
     public void setJoueur1(Joueur joueur1) {
         this.joueur1 = joueur1;
     }
 
+    /**
+     *
+     * @return
+     */
     public Joueur getJoueur2() {
         return joueur2;
     }
 
+    /**
+     *
+     * @param joueur2
+     */
     public void setJoueur2(Joueur joueur2) {
         this.joueur2 = joueur2;
     }
 
+    /**
+     *
+     * @return
+     */
     public Grille getGrille1() {
         return grille1;
     }
 
+    /**
+     *
+     * @param grille1
+     */
     public void setGrille1(Grille grille1) {
         this.grille1 = grille1;
     }
 
+    /**
+     *
+     * @return
+     */
     public Grille getGrille2() {
         return grille2;
     }
 
+    /**
+     *
+     * @param grille2
+     */
     public void setGrille2(Grille grille2) {
         this.grille2 = grille2;
     }
 
+    /**
+     *
+     * @return
+     */
     public Bateau getBateau() {
         return bateau;
     }
 
+    /**
+     *
+     * @param bateau
+     */
     public void setBateau(Bateau bateau) {
         this.bateau = bateau;
     }
     
+    /**
+     *  Constructeur qui initialise le jeu
+     */
     public void jeu() {
         
         int tailleGrille = 5;
@@ -124,6 +184,9 @@ public class Jeu {
         
     }
     
+    /**
+     *  Un tour de jeu (j1 puis j2)
+     */
     public void tourDeJeu(){
         Scanner scanner = new Scanner(System.in);
         
@@ -182,6 +245,11 @@ public class Jeu {
         System.out.println();
     }
     
+    /**
+     *  Place un bateau sur la grille
+     * @param j joueur qui place le bateau
+     * @param b modele de bateau utilisé précédement (doit juste être initialisé)
+     */
     public void creeBateau(Joueur j, Bateau b){
         Scanner scanner = new Scanner(System.in);
         
