@@ -20,14 +20,6 @@ public class Jeu {
     
     public Bateau bateau;
 
-    public Jeu() {
-        this.joueur1 = null;
-        this.joueur2 = null;
-        this.grille1 = null;
-        this.grille2 = null;
-        this.bateau = null;
-    }
-
     public Joueur getJoueur1() {
         return joueur1;
     }
@@ -67,10 +59,6 @@ public class Jeu {
     public void setBateau(Bateau bateau) {
         this.bateau = bateau;
     }
-    
-    
-
-    
     
     public void jeu() {
         
