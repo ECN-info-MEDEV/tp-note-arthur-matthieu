@@ -26,6 +26,9 @@ public class BatailleNavale {
         if (jeu.joueur2.aPerdu() == true){
             System.out.println(jeu.joueur2 + " a perdu !");
         }
+        
+        //Actuellement comme les deux joueurs jouent leur tour même si l'un des deux perds durant le tour, les deux joueurs
+        //peuvent techniquement finir ex-aequo 
     }
     
 }
