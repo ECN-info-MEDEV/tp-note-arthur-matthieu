@@ -78,7 +78,25 @@ public class Joueur {
     }
     
     public void pose(Bateau b){
-        if (b.Get)
+        
+        if (b.GetEstVertical() == false){
+        
+            for (int i = b.getPosition()[0]; i < b.getTaille() ; i++){
+            
+                this.plateau.getGrille()[i][b.getPosition()[1]] = 'B';
+            
+            }
+            
+        }
+        
+        else{
+            
+            for (int i = b.getPosition()[1]; i < b.getTaille() ; i++){
+            
+                this.plateau.getGrille()[b.getPosition()[0]][i] = 'B';
+            
+            }
+        }
     }
     
 }
