@@ -24,7 +24,7 @@ public class Bateau {
     public Bateau(int taille, int[] position, boolean isVertical) {
         this.taille = taille; 
         this.position = position;
-        this.isVertical = isVertical;
+        this.estVertical = isVertical;
     }
 
     public int getTaille() {
