@@ -66,11 +66,11 @@ public class Grille {
     }
     
     
-    private void placeBateau(int x , int y){
+    public void placeBateau(int x , int y){
         this.grille[x][y]='B';
     }
     
-    private boolean touche(int x, int y){
+    public boolean touche(int x, int y){
         
         boolean touche;
         
@@ -89,7 +89,7 @@ public class Grille {
         return touche;
     }
     
-    private void affiche (){
+    public void affiche (){
         for (int i =0; i < taille ; i++){
             
             for (int j = 0 ; j < taille ; j++){
@@ -102,7 +102,7 @@ public class Grille {
         }
     }
     
-    private void afficheAdversaire (){
+    public void afficheAdversaire (){
         
         for (int i =0; i < taille ; i++){
             

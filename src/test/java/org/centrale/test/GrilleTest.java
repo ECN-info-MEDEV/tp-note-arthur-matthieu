@@ -73,4 +73,23 @@ public class GrilleTest {
                 
                 assertSame(newGrid, g.getGrille());
     }
+    /**
+     * Test of PlaceBateau method, of class Grille.
+     */
+    @Test
+    public void testPlaceBateau(){
+        Grille g = new Grille (5);
+        char[][] newGrid = new char[5][5];
+                newGrid[2][2] = 'B';
+        g.placeBateau(2,2);
+        assertSame(newGrid, g.getGrille());
+    }
+    
+    @Test
+    public void testTouche(){
+       Grille g = new Grille (5);
+       boolean res = g.touche(1,1);
+       assertFalse(res);
+       
+    }
 }
