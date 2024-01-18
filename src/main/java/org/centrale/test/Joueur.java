@@ -10,4 +10,50 @@ package org.centrale.test;
  */
 public class Joueur {
     
+    private String nom;
+    private Grille plateau;
+
+    /**
+     *
+     * @param nom
+     * @param plateau
+     */
+    public Joueur(String nom, Grille plateau) {
+        this.nom = nom;
+        this.plateau = plateau;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     *
+     * @param nom
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Grille getPlateau() {
+        return plateau;
+    }
+
+    /**
+     *
+     * @param plateau
+     */
+    public void setPlateau(Grille plateau) {
+        this.plateau = plateau;
+    }
+
+    
 }
