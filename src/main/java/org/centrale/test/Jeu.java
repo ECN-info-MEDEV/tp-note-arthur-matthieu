@@ -7,7 +7,7 @@ package org.centrale.test;
 import java.util.Scanner;
 
 /**
- *
+ * Classe principale représentant les règles du jeu
  * @author arthu
  */
 public class Jeu {
