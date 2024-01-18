@@ -141,13 +141,57 @@ public class Jeu {
         
             //Joueur 1
         System.out.println("Tour de " + joueur1);
+        System.out.println();
         System.out.println("Votre plateau :");
         this.grille1.affiche();
         System.out.println("Plateau de l'adversaire");
         this.grille2.afficheAdversaire();
+        System.out.println();
         
+        System.out.println("Ou souhaitez-vous tirer ?");
+        System.out.println("Position en x du tir");
+        int x = scanner.nextInt()-1;
+        System.out.println("Position en y du tir");
+        int y = scanner.nextInt()-1;
         
-
+        boolean touche = this.grille2.touche(x,y);
+        if (touche == true){
+            System.out.println("Touché !");
+        }
+        else {
+            System.out.println("Raté !");
+        }
+        
+        System.out.println("Plateau de l'adversaire");
+        this.grille2.afficheAdversaire();
+        System.out.println();
+        
+            //Joueur 2
+        System.out.println("Tour de " + joueur2);
+        System.out.println();
+        System.out.println("Votre plateau :");
+        this.grille2.affiche();
+        System.out.println("Plateau de l'adversaire");
+        this.grille1.afficheAdversaire();
+        System.out.println();
+        
+        System.out.println("Ou souhaitez-vous tirer ?");
+        System.out.println("Position en x du tir");
+        x = scanner.nextInt()-1;
+        System.out.println("Position en y du tir");
+        y = scanner.nextInt()-1;
+        
+        touche = this.grille1.touche(x,y);
+        if (touche == true){
+            System.out.println("Touché !");
+        }
+        else {
+            System.out.println("Raté !");
+        }
+        
+        System.out.println("Plateau de l'adversaire");
+        this.grille1.afficheAdversaire();
+        System.out.println();
     }
     
     public void creeBateau(Joueur j, Bateau b){
